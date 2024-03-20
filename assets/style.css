@@ -630,6 +630,9 @@ position: sticky;
   }
 }
 @media (max-height: 540px) {
+  .introduction{
+    height: 50vh;
+  }
   .introduction__arrow {
     -webkit-animation: none;
     animation: none;
@@ -799,6 +802,9 @@ position: sticky;
   .about__visual{
     width: 100%;
   }
+  .about__content-signature{
+    color: #6882f6;
+  }
   .about__wrapper .resume-btn{
     top: 95%;
     left: -8%;
@@ -817,7 +823,6 @@ position: sticky;
     margin-left:auto;
   }
 }
-
 .skill {
   position: relative;
   padding: 60px 0;
@@ -1509,6 +1514,9 @@ position: sticky;
   }
   .contact__form-el--message {
     height: 90px;
+  }
+  .contact__form-el--submit{
+    width: 100%;
   }
 }
 .footer {
