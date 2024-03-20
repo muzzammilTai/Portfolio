@@ -4,6 +4,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
 body {
   margin: 0;
 }
@@ -694,6 +695,7 @@ position: sticky;
   background-color: white;
   top: 85px;
   left: -40px;
+  text-align: center;
   z-index: 5;
   border: 3px solid #2046f2;
   transition: .3s ease-in-out;
@@ -738,7 +740,8 @@ position: sticky;
   .about__wrapper .resume-btn{
     background: none;
     top: 85%;
-    left: -23%;
+    left: -10%;
+    transform: translate(-50%);
   }
   .about__visual {
     bottom: -60px;
@@ -773,7 +776,7 @@ position: sticky;
     height: 540px;
   }
   .about__visual {
-    width: 120vw;
+    width: 100%;
   }
   .about__content-blurb h2 {
     font-size: 32px;
@@ -785,10 +788,33 @@ position: sticky;
     border-radius: 50px;
   }
   .about__wrapper .resume-btn{
-    left: -28%;
+    left: -10%;
+    transform: translate(-50%);
   }
   .about__content {
     left: 20%;
+  }
+}
+@media (max-width: 600px) {
+  .about__visual{
+    width: 100%;
+  }
+  .about__wrapper .resume-btn{
+    top: 95%;
+    left: -8%;
+    width: 40vw;
+    background: #ffffff;
+    margin-left: auto;
+  }
+}
+@media (max-width: 500px) {
+   .about__visual{
+    width: 100%;
+  } 
+  .about__wrapper .resume-btn{
+    top: 92%;
+    left: -15%;
+    margin-left:auto;
   }
 }
 
