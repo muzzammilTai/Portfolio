@@ -491,8 +491,8 @@ input[type="button"]:focus {
   }
 }
 
-.nav-container{
-position: sticky;
+.nav-container {
+  position: sticky;
   top: 15px;
 }
 
@@ -500,17 +500,17 @@ position: sticky;
   z-index: 10;
   background: #ffffff;
   box-shadow: 0 0 15px #757575c1;
-}   
+}
 
-.navbar-brand{
+.navbar-brand {
   color: #6882f6;
 }
 
-.navbar-toggler{
+.navbar-toggler {
   border: none;
 }
 
-.navbar-toggler:focus{
+.navbar-toggler:focus {
   box-shadow: none;
 }
 
@@ -567,7 +567,7 @@ position: sticky;
 }
 
 @media (max-width: 540px) {
-  .introduction{
+  .introduction {
     height: 70vh;
   }
 }
@@ -687,17 +687,22 @@ position: sticky;
   z-index: 1;
 }
 
-.about__content-blurb{
+.about__content-blurb {
   position: absolute;
-  top: -100px;
+  top: -170px;
   left: 220px;
   width: 350px;
 }
-.about__wrapper .btn{
+@media (min-width: 991px) {
+  .about__content-blurb .blurb__copy {
+    text-align: justify;
+  }
+}
+.about__wrapper .btn {
   z-index: 5;
   width: 100%;
 }
-.about__wrapper .resume-btn{
+.about__wrapper .resume-btn {
   position: absolute;
   background-color: #fafafa;
   width: 200px;
@@ -705,9 +710,9 @@ position: sticky;
   left: 76%;
   text-align: center;
   border: 3px solid #2046f2;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
-.about__wrapper .resume-btn:hover{
+.about__wrapper .resume-btn:hover {
   border: 3px solid #6882f6;
   background-color: #6882f6;
   color: white;
@@ -721,15 +726,14 @@ position: sticky;
   font-family: "Allura", cursive;
   background: #fafafa;
 }
-@media (max-width: 1141px) and (min-width:991px) {
-  .about__content-blurb{
+@media (max-width: 1141px) and (min-width: 991px) {
+  .about__content-blurb {
     width: 275px;
-    background: #6882f6;
   }
   .about__content-blurb .blurb__heading {
     font-size: 52px;
   }
-  .about__content-blurb .blurb__copy{
+  .about__content-blurb .blurb__copy {
     font-size: 13px;
   }
 }
@@ -756,13 +760,13 @@ position: sticky;
     right: 0;
     bottom: 0;
   }
-  .about__wrapper .btn{
+  .about__wrapper .btn {
     height: 500px;
   }
-  .about__wrapper .resume-btn{
+  .about__wrapper .resume-btn {
     top: 100%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
   }
   .about__content {
     top: 50%;
@@ -802,38 +806,38 @@ position: sticky;
   .about__content-blurb h2 {
     font-size: 32px;
   }
-  .about__wrapper::before{
+  .about__wrapper::before {
     border-radius: 50px;
   }
-  .about__wrapper::after{
+  .about__wrapper::after {
     border-radius: 50px;
   }
   .about__content {
     left: 10%;
     margin-left: auto;
   }
-  .about__wrapper .btn{
+  .about__wrapper .btn {
     height: 415px;
   }
-    .about__wrapper .resume-btn{
+  .about__wrapper .resume-btn {
     top: 100%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
   }
 }
 @media (max-width: 600px) {
-  .about__visual{
+  .about__visual {
     width: 70%;
   }
-  .about__content-signature{
+  .about__content-signature {
     color: #6882f6;
   }
 }
 @media (max-width: 500px) {
-   .about__visual{
+  .about__visual {
     width: 90%;
-  } 
-  .about__content{
+  }
+  .about__content {
     bottom: 50%;
   }
 }
@@ -860,7 +864,7 @@ position: sticky;
   outline: 1px solid transparent;
 }
 
-.not{
+.not {
   display: none;
 }
 
@@ -911,7 +915,7 @@ position: sticky;
   transform: rotate3d(0, 0, 0, 0deg);
 }
 
-.html img{
+.html img {
   top: 16%;
   left: -100%;
   right: -100%;
@@ -1017,8 +1021,8 @@ position: sticky;
     align-items: center;
   }
 }
-.wrapper .h4{
-    color: #2046f2;
+.wrapper .h4 {
+  color: #2046f2;
 }
 .design {
   position: relative;
@@ -1074,32 +1078,33 @@ position: sticky;
   background-size: 100%;
   background-repeat: no-repeat;
 }
-.design__content h2, .design2__content h2{
-    color: #585858;
+.design__content h2,
+.design2__content h2 {
+  color: #585858;
 }
 @media (max-width: 991px) {
   .design__content h2 {
     font-size: 35px;
   }
-  .design__visual{
+  .design__visual {
     top: 80px;
     left: 20%;
     width: 922px;
     height: 586px;
   }
-  .design3__visual{
+  .design3__visual {
     top: 80px;
     left: 40%;
     width: 679px;
     height: 439px;
   }
- .design5__visual {
+  .design5__visual {
     top: 55px;
     left: 35%;
     width: 600px;
     height: 586px;
   }
- .design7__visual {
+  .design7__visual {
     top: 55px;
     left: 40%;
     width: 500px;
@@ -1123,14 +1128,14 @@ position: sticky;
   .design__content p {
     margin: 0 auto 20px auto;
   }
-  .design__visual{
-   top: 40%;
+  .design__visual {
+    top: 40%;
     left: 50%;
     transform: translate(-50%);
     width: 90vw;
     height: 500px;
   }
-  .design3__visual{
+  .design3__visual {
     top: 38%;
     left: 50%;
     transform: translate(-50%);
@@ -1153,7 +1158,7 @@ position: sticky;
   }
 }
 @media (max-width: 500px) {
-  .blurb__heading{
+  .blurb__heading {
     font-size: 10vw;
   }
   .design {
@@ -1172,14 +1177,14 @@ position: sticky;
   .design__content p {
     margin: 0 auto 20px auto;
   }
-  .design__visual{
+  .design__visual {
     bottom: 0;
     left: 50%;
     transform: translate(-50%);
     width: 120vw;
     height: 439px;
   }
-  .design3__visual{
+  .design3__visual {
     bottom: 0;
     left: 50%;
     transform: translate(-50%);
@@ -1308,7 +1313,7 @@ position: sticky;
     margin: 0 auto 20px auto;
   }
   .design2__visual {
-   top: 40%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%);
     width: 80vw;
@@ -1433,7 +1438,8 @@ position: sticky;
   z-index: 3;
 }
 
-.contact__form input, .contact__form textarea{
+.contact__form input,
+.contact__form textarea {
   border-radius: 25px;
 }
 .contact__form-el {
@@ -1497,7 +1503,7 @@ position: sticky;
   .contact__heading {
     font-size: 32px;
   }
-  .contact__wrapper::before{
+  .contact__wrapper::before {
     border-radius: 50px;
   }
   .contact__form-el--name,
@@ -1529,7 +1535,7 @@ position: sticky;
   .contact__form-el--message {
     height: 90px;
   }
-  .contact__form-el--submit{
+  .contact__form-el--submit {
     width: 100%;
   }
 }
@@ -1601,7 +1607,7 @@ position: sticky;
     -ms-flex-order: 3;
     order: 3;
   }
-  
+
   .footer__logo {
     position: static;
     -webkit-transform: translate(0, 0);
