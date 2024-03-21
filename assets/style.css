@@ -14,7 +14,7 @@ details,
 figcaption,
 figure,
 footer,
-header,
+.header,
 hgroup,
 main,
 menu,
@@ -565,6 +565,12 @@ position: sticky;
   -ms-flex-pack: center;
   justify-content: center;
 }
+
+@media (max-width: 540px) {
+  .introduction{
+    height: 70vh;
+  }
+}
 .introduction::before {
   content: "مُزَّمِّل";
   position: absolute;
@@ -693,7 +699,7 @@ position: sticky;
 }
 .about__wrapper .resume-btn{
   position: absolute;
-  background-color: white;
+  background-color: #fafafa;
   width: 200px;
   top: 85px;
   left: 76%;
@@ -714,6 +720,18 @@ position: sticky;
   width: 200px;
   font-family: "Allura", cursive;
   background: #fafafa;
+}
+@media (max-width: 1141px) and (min-width:991px) {
+  .about__content-blurb{
+    width: 275px;
+    background: #6882f6;
+  }
+  .about__content-blurb .blurb__heading {
+    font-size: 52px;
+  }
+  .about__content-blurb .blurb__copy{
+    font-size: 13px;
+  }
 }
 @media (max-width: 991px) {
   .about {
