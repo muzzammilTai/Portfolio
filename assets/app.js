@@ -5129,9 +5129,9 @@ var _gsScope =
       var n = "scroll" + ("x" === r ? "Left" : "Top");
       return (
         i === e &&
-        (null != i.pageXOffset
-          ? (n = "page" + r.toUpperCase() + "Offset")
-          : (i = null != t[n] ? t : document.body)),
+          (null != i.pageXOffset
+            ? (n = "page" + r.toUpperCase() + "Offset")
+            : (i = null != t[n] ? t : document.body)),
         function () {
           return i[n];
         }
@@ -5149,8 +5149,8 @@ var _gsScope =
       return "number" === n || ("string" === n && "=" === t.charAt(1))
         ? t
         : "max" === t
-          ? i(e, r)
-          : Math.min(i(e, r), s(t, e)[r]);
+        ? i(e, r)
+        : Math.min(i(e, r), s(t, e)[r]);
     },
     a = _gsScope._gsDefine.plugin({
       propName: "scrollTo",
@@ -5164,9 +5164,9 @@ var _gsScope =
           "object" != typeof i
             ? ((i = { y: i }),
               "string" == typeof i.y &&
-              "max" !== i.y &&
-              "=" !== i.y.charAt(1) &&
-              (i.x = i.y))
+                "max" !== i.y &&
+                "=" !== i.y.charAt(1) &&
+                (i.x = i.y))
             : i.nodeType && (i = { y: i, x: i }),
           (this.vars = i),
           (this._autoKill = i.autoKill !== !1),
@@ -5176,24 +5176,24 @@ var _gsScope =
           (this.y = this.yPrev = this.getY()),
           null != i.x
             ? (this._addTween(
-              this,
-              "x",
-              this.x,
-              o(i.x, t, "x") - (i.offsetX || 0),
-              "scrollTo_x",
-              !0
-            ),
+                this,
+                "x",
+                this.x,
+                o(i.x, t, "x") - (i.offsetX || 0),
+                "scrollTo_x",
+                !0
+              ),
               this._overwriteProps.push("scrollTo_x"))
             : (this.skipX = !0),
           null != i.y
             ? (this._addTween(
-              this,
-              "y",
-              this.y,
-              o(i.y, t, "y") - (i.offsetY || 0),
-              "scrollTo_y",
-              !0
-            ),
+                this,
+                "y",
+                this.y,
+                o(i.y, t, "y") - (i.offsetY || 0),
+                "scrollTo_y",
+                !0
+              ),
               this._overwriteProps.push("scrollTo_y"))
             : (this.skipY = !0),
           !0
@@ -5209,22 +5209,22 @@ var _gsScope =
         this.x < 0 && (this.x = 0),
           this.y < 0 && (this.y = 0),
           this._autoKill &&
-          (!this.skipX &&
-            (o > l || -l > o) &&
-            r < i(this._target, "x") &&
-            (this.skipX = !0),
+            (!this.skipX &&
+              (o > l || -l > o) &&
+              r < i(this._target, "x") &&
+              (this.skipX = !0),
             !this.skipY &&
-            (s > l || -l > s) &&
-            n < i(this._target, "y") &&
-            (this.skipY = !0),
+              (s > l || -l > s) &&
+              n < i(this._target, "y") &&
+              (this.skipY = !0),
             this.skipX &&
-            this.skipY &&
-            (this._tween.kill(),
+              this.skipY &&
+              (this._tween.kill(),
               this.vars.onAutoKill &&
-              this.vars.onAutoKill.apply(
-                this.vars.onAutoKillScope || this._tween,
-                this.vars.onAutoKillParams || []
-              ))),
+                this.vars.onAutoKill.apply(
+                  this.vars.onAutoKillScope || this._tween,
+                  this.vars.onAutoKillParams || []
+                ))),
           this._wdw
             ? e.scrollTo(this.skipX ? r : this.x, this.skipY ? n : this.y)
             : (this.skipY || (this._target.scrollTop = this.y),
@@ -5254,10 +5254,9 @@ var _gsScope =
     "function" == typeof define && define.amd
       ? define(["TweenLite"], e)
       : "undefined" != typeof module &&
-      module.exports &&
-      (require("../TweenLite.js"), (module.exports = e()));
+        module.exports &&
+        (require("../TweenLite.js"), (module.exports = e()));
   })("ScrollToPlugin"),
-
   !(function (t) {
     "use strict";
     var e,
@@ -5302,13 +5301,13 @@ var _gsScope =
           a = window.GreenSockGlobals || window;
         if (
           ((e = a.TweenMax || a.TweenLite),
-            e &&
+          e &&
             ((n = (e.version + ".0.0").split(".")),
-              (s = !(Number(n[0]) > 0 && Number(n[1]) > 7)),
-              (a = a.com.greensock),
-              (i = a.plugins.CSSPlugin),
-              (p = a.easing.Ease.map || {})),
-            !e || !i || s)
+            (s = !(Number(n[0]) > 0 && Number(n[1]) > 7)),
+            (a = a.com.greensock),
+            (i = a.plugins.CSSPlugin),
+            (p = a.easing.Ease.map || {})),
+          !e || !i || s)
         )
           return (
             (e = null),
@@ -5317,9 +5316,9 @@ var _gsScope =
               window.console &&
               (window.console.log(
                 "The jquery.gsap.js plugin requires the TweenMax (or at least TweenLite and CSSPlugin) JavaScript file(s)." +
-                (s ? " Version " + n.join(".") + " is too old." : "")
+                  (s ? " Version " + n.join(".") + " is too old." : "")
               ),
-                (r = !0))
+              (r = !0))
             )
           );
         if (t.easing) {
@@ -5347,10 +5346,10 @@ var _gsScope =
       for (_ in r) {
         if (
           ((c = r[_]),
-            c instanceof Array &&
+          c instanceof Array &&
             p[c[1]] &&
             ((w = w || {}), (w[_] = c[1]), (c = c[0])),
-            "show" === c ||
+          "show" === c ||
             "hide" === c ||
             "toggle" === c ||
             (-1 !== u.indexOf(_) && -1 !== u.indexOf("," + _ + ",")))
@@ -5374,7 +5373,7 @@ var _gsScope =
           var r,
             n = a(y);
           if (g)
-            for (r = g.length; --r > -1;)
+            for (r = g.length; --r > -1; )
               e.to(this, t.fx.off ? 0 : v.duration / 1e3, g[r]);
           (n.onComplete = function () {
             i ? i() : v.old && t(this).each(v.old);
@@ -5384,9 +5383,9 @@ var _gsScope =
         v.queue !== !1
           ? (x.queue(v.queue, m),
             "function" == typeof v.old &&
-            t(x[x.length - 1]).queue(v.queue, function (t) {
-              v.old.call(x), t();
-            }))
+              t(x[x.length - 1]).queue(v.queue, function (t) {
+                v.old.call(x), t();
+              }))
           : m.call(x),
         x
       );
@@ -5394,7 +5393,7 @@ var _gsScope =
       (t.fn.stop = function (t, i) {
         if ((s.call(this, t, i), e)) {
           if (i)
-            for (var r, n = e.getTweensOf(this), o = n.length; --o > -1;)
+            for (var r, n = e.getTweensOf(this), o = n.length; --o > -1; )
               (r = n[o].totalTime() / n[o].totalDuration()),
                 r > 0 && 1 > r && n[o].seek(n[o].totalDuration());
           e.killTweensOf(this);
@@ -5415,13 +5414,13 @@ var _gsScope =
     "function" == typeof define && define.amd
       ? define(e)
       : "object" == typeof exports
-        ? (module.exports = e())
-        : (t.ScrollMagic = e());
+      ? (module.exports = e())
+      : (t.ScrollMagic = e());
   })(this, function () {
     "use strict";
-    var t = function () { };
+    var t = function () {};
     (t.version = "2.0.5"),
-      window.addEventListener("mousewheel", function () { });
+      window.addEventListener("mousewheel", function () {});
     var e = "data-scrollmagic-pin-spacer";
     t.Controller = function (r) {
       var s,
@@ -5476,8 +5475,8 @@ var _gsScope =
               ? window.scrollTo(n.get.scrollLeft(), t)
               : (p.container.scrollTop = t)
             : v
-              ? window.scrollTo(t, n.get.scrollTop())
-              : (p.container.scrollLeft = t);
+            ? window.scrollTo(t, n.get.scrollTop())
+            : (p.container.scrollLeft = t);
         }),
         O = function () {
           if (x && _) {
@@ -5562,16 +5561,16 @@ var _gsScope =
           return (
             n.type.Array(e)
               ? e.forEach(function (t) {
-                c.updateScene(t, i);
-              })
+                  c.updateScene(t, i);
+                })
               : i
-                ? e.update(!0)
-                : _ !== !0 &&
+              ? e.update(!0)
+              : _ !== !0 &&
                 e instanceof t.Scene &&
                 ((_ = _ || []),
-                  -1 == _.indexOf(e) && _.push(e),
-                  (_ = R(_)),
-                  k()),
+                -1 == _.indexOf(e) && _.push(e),
+                (_ = R(_)),
+                k()),
             c
           );
         }),
@@ -5586,7 +5585,7 @@ var _gsScope =
           else {
             var s = n.get.elements(i)[0];
             if (s) {
-              for (; s.parentNode.hasAttribute(e);) s = s.parentNode;
+              for (; s.parentNode.hasAttribute(e); ) s = s.parentNode;
               var o = p.vertical ? "top" : "left",
                 a = n.get.offset(p.container),
                 l = n.get.offset(s);
@@ -5621,7 +5620,7 @@ var _gsScope =
         }),
         (this.destroy = function (t) {
           window.clearTimeout(o);
-          for (var e = d.length; e--;) d[e].destroy(t);
+          for (var e = d.length; e--; ) d[e].destroy(t);
           return (
             p.container.removeEventListener("resize", C),
             p.container.removeEventListener("scroll", C),
@@ -5681,14 +5680,14 @@ var _gsScope =
         (this.on = function (t, e) {
           return (
             n.type.Function(e) &&
-            ((t = t.trim().split(" ")),
+              ((t = t.trim().split(" ")),
               t.forEach(function (t) {
                 var i = t.split("."),
                   r = i[0],
                   n = i[1];
                 "*" != r &&
                   (y[r] || (y[r] = []),
-                    y[r].push({ namespace: n || "", callback: e }));
+                  y[r].push({ namespace: n || "", callback: e }));
               })),
             f
           );
@@ -5702,7 +5701,7 @@ var _gsScope =
                     n = i[1] || "",
                     s = "*" === r ? Object.keys(y) : [r];
                   s.forEach(function (t) {
-                    for (var i = y[t] || [], r = i.length; r--;) {
+                    for (var i = y[t] || [], r = i.length; r--; ) {
                       var s = i[r];
                       !s ||
                         (n !== s.namespace && "*" !== n) ||
@@ -5743,8 +5742,8 @@ var _gsScope =
           (this.addTo = function (e) {
             return (
               e instanceof t.Controller &&
-              o != e &&
-              (o && o.removeScene(f),
+                o != e &&
+                (o && o.removeScene(f),
                 (o = e),
                 S(),
                 w(!0),
@@ -5785,8 +5784,8 @@ var _gsScope =
                     c.duration > 0
                       ? (i - _.start) / (_.end - _.start)
                       : i >= _.start
-                        ? 1
-                        : 0),
+                      ? 1
+                      : 0),
                     f.trigger("update", {
                       startPos: _.start,
                       endPos: _.end,
@@ -5812,13 +5811,13 @@ var _gsScope =
                     (d = 1 > t && n ? 0 : 1),
                     (p = 0 === d ? a : l))
                   : 0 > t && p !== a && n
-                    ? ((d = 0), (p = a), (e = !0))
-                    : t >= 0 && 1 > t && n
-                      ? ((d = t), (p = l), (e = !0))
-                      : t >= 1 && p !== h
-                        ? ((d = 1), (p = h), (e = !0))
-                        : p !== l || n || R(),
-                  e)
+                  ? ((d = 0), (p = a), (e = !0))
+                  : t >= 0 && 1 > t && n
+                  ? ((d = t), (p = l), (e = !0))
+                  : t >= 1 && p !== h
+                  ? ((d = 1), (p = h), (e = !0))
+                  : p !== l || n || R(),
+                e)
               ) {
                 var s = { progress: d, state: p, scrollDirection: r },
                   u = p != i,
@@ -5834,19 +5833,19 @@ var _gsScope =
             return d;
           });
         var x = function () {
-          (_ = { start: m + c.offset }),
-            o &&
-            c.triggerElement &&
-            (_.start -= o.info("size") * c.triggerHook),
-            (_.end = _.start + c.duration);
-        },
+            (_ = { start: m + c.offset }),
+              o &&
+                c.triggerElement &&
+                (_.start -= o.info("size") * c.triggerHook),
+              (_.end = _.start + c.duration);
+          },
           w = function (t) {
             if (s) {
               var e = "duration";
               O(e, s.call(f)) &&
                 !t &&
                 (f.trigger("change", { what: e, newval: c[e] }),
-                  f.trigger("shift", { reason: e }));
+                f.trigger("shift", { reason: e }));
             }
           },
           T = function (t) {
@@ -5855,8 +5854,8 @@ var _gsScope =
             if (o && r) {
               for (
                 var s = o.info(),
-                a = n.get.offset(s.container),
-                l = s.vertical ? "top" : "left";
+                  a = n.get.offset(s.container),
+                  l = s.vertical ? "top" : "left";
                 r.parentNode.hasAttribute(e);
 
               )
@@ -5867,8 +5866,8 @@ var _gsScope =
             var u = i != m;
             (m = i),
               u &&
-              !t &&
-              f.trigger("shift", { reason: "triggerElementPosition" });
+                !t &&
+                f.trigger("shift", { reason: "triggerElementPosition" });
           },
           b = function () {
             c.triggerHook > 0 &&
@@ -5920,9 +5919,9 @@ var _gsScope =
                 return arguments.length
                   ? ("duration" === t && (s = void 0),
                     O(t, e) &&
-                    (f.trigger("change", { what: t, newval: c[t] }),
+                      (f.trigger("change", { what: t, newval: c[t] }),
                       r.shifts.indexOf(t) > -1 &&
-                      f.trigger("shift", { reason: t })),
+                        f.trigger("shift", { reason: t })),
                     f)
                   : c[t];
               });
@@ -5940,7 +5939,7 @@ var _gsScope =
             var t = c.offset;
             return (
               o &&
-              (t += c.triggerElement ? m : o.info("size") * f.triggerHook()),
+                (t += c.triggerElement ? m : o.info("size") * f.triggerHook()),
               t
             );
           });
@@ -5959,39 +5958,39 @@ var _gsScope =
             f.removePin(t.reset);
           });
         var R = function (t) {
-          if (C && o) {
-            var e = o.info(),
-              i = A.spacer.firstChild;
-            if (t || p !== l) {
-              var r = {
-                position: A.inFlow ? "relative" : "absolute",
-                top: 0,
-                left: 0,
-              },
-                s = n.css(i, "position") != r.position;
-              A.pushFollowers
-                ? c.duration > 0 &&
-                (p === h && 0 === parseFloat(n.css(A.spacer, "padding-top"))
-                  ? (s = !0)
-                  : p === a &&
-                  0 === parseFloat(n.css(A.spacer, "padding-bottom")) &&
-                  (s = !0))
-                : (r[e.vertical ? "top" : "left"] = c.duration * d),
-                n.css(i, r),
-                s && M();
-            } else {
-              "fixed" != n.css(i, "position") &&
-                (n.css(i, { position: "fixed" }), M());
-              var u = n.get.offset(A.spacer, !0),
-                f =
-                  c.reverse || 0 === c.duration
-                    ? e.scrollPos - _.start
-                    : Math.round(d * c.duration * 10) / 10;
-              (u[e.vertical ? "top" : "left"] += f),
-                n.css(A.spacer.firstChild, { top: u.top, left: u.left });
+            if (C && o) {
+              var e = o.info(),
+                i = A.spacer.firstChild;
+              if (t || p !== l) {
+                var r = {
+                    position: A.inFlow ? "relative" : "absolute",
+                    top: 0,
+                    left: 0,
+                  },
+                  s = n.css(i, "position") != r.position;
+                A.pushFollowers
+                  ? c.duration > 0 &&
+                    (p === h && 0 === parseFloat(n.css(A.spacer, "padding-top"))
+                      ? (s = !0)
+                      : p === a &&
+                        0 === parseFloat(n.css(A.spacer, "padding-bottom")) &&
+                        (s = !0))
+                  : (r[e.vertical ? "top" : "left"] = c.duration * d),
+                  n.css(i, r),
+                  s && M();
+              } else {
+                "fixed" != n.css(i, "position") &&
+                  (n.css(i, { position: "fixed" }), M());
+                var u = n.get.offset(A.spacer, !0),
+                  f =
+                    c.reverse || 0 === c.duration
+                      ? e.scrollPos - _.start
+                      : Math.round(d * c.duration * 10) / 10;
+                (u[e.vertical ? "top" : "left"] += f),
+                  n.css(A.spacer.firstChild, { top: u.top, left: u.left });
+              }
             }
-          }
-        },
+          },
           M = function () {
             if (C && o && A.inFlow) {
               var t = p === l,
@@ -6008,15 +6007,15 @@ var _gsScope =
                 A.relSize.height
                   ? t
                     ? n.css(C, {
-                      height:
-                        n.get.height(A.spacer) -
-                        (A.pushFollowers ? c.duration : 0),
-                    })
+                        height:
+                          n.get.height(A.spacer) -
+                          (A.pushFollowers ? c.duration : 0),
+                      })
                     : n.css(C, { height: "100%" })
                   : ((s["min-height"] = n.get.height(e ? i : C, !0, !r)),
                     (s.height = t ? s["min-height"] : "auto")),
                 A.pushFollowers &&
-                ((s["padding" + (e ? "Top" : "Left")] = c.duration * d),
+                  ((s["padding" + (e ? "Top" : "Left")] = c.duration * d),
                   (s["padding" + (e ? "Bottom" : "Right")] =
                     c.duration * (1 - d))),
                 n.css(A.spacer, s);
@@ -6041,12 +6040,12 @@ var _gsScope =
               p === l &&
               !o.info("isDocument") &&
               (t.preventDefault(),
-                o._setScrollPos(
-                  o.info("scrollPos") -
+              o._setScrollPos(
+                o.info("scrollPos") -
                   ((t.wheelDelta ||
                     t[o.info("vertical") ? "wheelDeltaY" : "wheelDeltaX"]) /
                     3 || 30 * -t.detail)
-                ));
+              ));
           };
         (this.setPin = function (t, i) {
           var r = { pushFollowers: !0, spacerClass: "scrollmagic-pin-spacer" };
@@ -6085,21 +6084,21 @@ var _gsScope =
             });
           if (
             (a || n.extend(c, n.css(C, ["width", "height"])),
-              n.css(u, c),
-              u.setAttribute(e, ""),
-              n.addClass(u, i.spacerClass),
-              (A = {
-                spacer: u,
-                relSize: {
-                  width: "%" === h.width.slice(-1),
-                  height: "%" === h.height.slice(-1),
-                  autoFullWidth:
-                    "auto" === h.width && a && n.isMarginCollapseType(l.display),
-                },
-                pushFollowers: i.pushFollowers,
-                inFlow: a,
-              }),
-              !C.___origStyle)
+            n.css(u, c),
+            u.setAttribute(e, ""),
+            n.addClass(u, i.spacerClass),
+            (A = {
+              spacer: u,
+              relSize: {
+                width: "%" === h.width.slice(-1),
+                height: "%" === h.height.slice(-1),
+                autoFullWidth:
+                  "auto" === h.width && a && n.isMarginCollapseType(l.display),
+              },
+              pushFollowers: i.pushFollowers,
+              inFlow: a,
+            }),
+            !C.___origStyle)
           ) {
             C.___origStyle = {};
             var p = C.style,
@@ -6128,11 +6127,11 @@ var _gsScope =
               right: "auto",
             }),
             (A.relSize.width || A.relSize.autoFullWidth) &&
-            n.css(C, {
-              boxSizing: "border-box",
-              mozBoxSizing: "border-box",
-              webkitBoxSizing: "border-box",
-            }),
+              n.css(C, {
+                boxSizing: "border-box",
+                mozBoxSizing: "border-box",
+                webkitBoxSizing: "border-box",
+              }),
             window.addEventListener("scroll", F),
             window.addEventListener("resize", F),
             window.addEventListener("resize", L),
@@ -6164,7 +6163,7 @@ var _gsScope =
                 A.spacer.parentNode.insertBefore(i, A.spacer),
                   A.spacer.parentNode.removeChild(A.spacer),
                   C.parentNode.hasAttribute(e) ||
-                  (n.css(C, C.___origStyle), delete C.___origStyle);
+                    (n.css(C, C.___origStyle), delete C.___origStyle);
               }
               window.removeEventListener("scroll", F),
                 window.removeEventListener("resize", F),
@@ -6199,9 +6198,9 @@ var _gsScope =
           (this.removeClassToggle = function (t) {
             return (
               t &&
-              E.forEach(function (t) {
-                n.removeClass(t, D);
-              }),
+                E.forEach(function (t) {
+                  n.removeClass(t, D);
+                }),
               f.off("start.internal_class end.internal_class"),
               (D = void 0),
               (E = []),
@@ -6342,9 +6341,9 @@ var _gsScope =
           return (a = i + r), n;
         }),
         u ||
-        (u = function (e) {
-          t.clearTimeout(e);
-        }),
+          (u = function (e) {
+            t.clearTimeout(e);
+          }),
         (i.rAF = h.bind(t)),
         (i.cAF = u.bind(t));
       var f = (i.type = function (t) {
@@ -6369,10 +6368,10 @@ var _gsScope =
           return "object" == typeof HTMLElement
             ? t instanceof HTMLElement
             : t &&
-            "object" == typeof t &&
-            null !== t &&
-            1 === t.nodeType &&
-            "string" == typeof t.nodeName;
+                "object" == typeof t &&
+                null !== t &&
+                1 === t.nodeType &&
+                "string" == typeof t.nodeName;
         });
       var c = (i.get = {});
       return (
@@ -6426,9 +6425,9 @@ var _gsScope =
             (t.classList
               ? t.classList.remove(e)
               : (t.className = t.className.replace(
-                RegExp("(^|\\b)" + e.split(" ").join("|") + "(\\b|$)", "gi"),
-                " "
-              )));
+                  RegExp("(^|\\b)" + e.split(" ").join("|") + "(\\b|$)", "gi"),
+                  " "
+                )));
         }),
         (i.css = function (t, e) {
           if (f.String(e)) return n(t)[o(e)];
@@ -6456,8 +6455,8 @@ var _gsScope =
     "function" == typeof define && define.amd
       ? define(["ScrollMagic", "TweenMax", "TimelineMax"], e)
       : "object" == typeof exports
-        ? (require("gsap"), e(require("scrollmagic"), TweenMax, TimelineMax))
-        : e(
+      ? (require("gsap"), e(require("scrollmagic"), TweenMax, TimelineMax))
+      : e(
           t.ScrollMagic || (t.jQuery && t.jQuery.ScrollMagic),
           t.TweenMax || t.TweenLite,
           t.TimelineMax || t.TimelineLite
@@ -6485,11 +6484,11 @@ var _gsScope =
                 ? t.play()
                 : "DURING" === i || t.paused() || t.pause()
               : e != t.progress() &&
-              (0 === r.duration()
-                ? e > 0
-                  ? t.play()
-                  : t.reverse()
-                : r.tweenChanges() && t.tweenTo
+                (0 === r.duration()
+                  ? e > 0
+                    ? t.play()
+                    : t.reverse()
+                  : r.tweenChanges() && t.tweenTo
                   ? t.tweenTo(e * t.duration())
                   : t.progress(e).pause());
           }
@@ -6520,8 +6519,8 @@ var _gsScope =
     "function" == typeof define && define.amd
       ? define(["ScrollMagic", "jquery"], e)
       : "object" == typeof exports
-        ? e(require("scrollmagic"), require("jquery"))
-        : e(t.ScrollMagic, t.jQuery);
+      ? e(require("scrollmagic"), require("jquery"))
+      : e(t.ScrollMagic, t.jQuery);
   })(this, function (t, e) {
     "use strict";
     (t._util.get.elements = function (t) {
@@ -6552,24 +6551,24 @@ var _gsScope =
       }),
       $(window).width() > 991)
     ) {
-        let sections = document.querySelectorAll("section");
-        let navLinks = document.querySelectorAll("ul li a");
-        window.onscroll = () => {
-          sections.forEach((sec) => {
-            let top = window.scrollY;
-            let offset = sec.offsetTop - 150;
-            let height = sec.offsetHeight;
-            let id = sec.getAttribute("id");
-            if (top >= offset && top < offset + height) {
-              navLinks.forEach((links) => {
-                links.classList.remove("active");
-                document
-                  .querySelector("ul li a[href*=" + id + "]")
-                  .classList.add("active");
-              });
-            }
-          });
-        };
+      let sections = document.querySelectorAll("section");
+      let navLinks = document.querySelectorAll("ul li a");
+      window.onscroll = () => {
+        sections.forEach((sec) => {
+          let top = window.scrollY;
+          let offset = sec.offsetTop - 150;
+          let height = sec.offsetHeight;
+          let id = sec.getAttribute("id");
+          if (top >= offset && top < offset + height) {
+            navLinks.forEach((links) => {
+              links.classList.remove("active");
+              document
+                .querySelector("ul li a[href*=" + id + "]")
+                .classList.add("active");
+            });
+          }
+        });
+      };
       var e = new ScrollMagic.Controller(),
         i = $(".about"),
         r = $(".about__content-blurb"),
@@ -6746,6 +6745,22 @@ var _gsScope =
       var S = new ScrollMagic.Scene({ triggerElement: w, reverse: !1 })
           .setTween(P)
           .addTo(e),
+        _ = $(".work"),
+        m = $(".work__content"),
+        g = $(".work__visual"),
+        v = CSSRulePlugin.getRule(".work__list:before"),
+        y = new TimelineLite();
+      y.set(g, { scale: 1 })
+        .from(m, 0.8, { x: -50, opacity: 0, ease: Power1.easeOut })
+        .from(g, 0.8, { x: 50, opacity: 0, ease: Power1.easeOut }, 0)
+        .from(v, 0.8, { cssRule: { opacity: 0 }, ease: Power1.easeOut });
+      var x = new ScrollMagic.Scene({
+          triggerElement: _,
+          offset: 60,
+          reverse: !1,
+        })
+          .setTween(y)
+          .addTo(e),
         O = $(".contact"),
         k = $(".contact__form"),
         C = $(".contact__visual"),
@@ -6758,4 +6773,36 @@ var _gsScope =
         .setTween(R)
         .addTo(e);
     }
+    var intervalID; 
+
+    $(".work__navigation-el").click(function () {
+      var t = $(this),
+        e = t.parent().children().index(t);
+
+      $(".work__navigation-el").removeClass("work__navigation-el--is-active");
+      t.addClass("work__navigation-el--is-active");
+
+      $(".work__list").children().removeClass("work__list-el--is-active");
+      $(".work__list").children().eq(e).addClass("work__list-el--is-active");
+
+      clearInterval(intervalID);
+      startInterval(e);
+    });
+
+    function startInterval(index) {
+      intervalID = setInterval(function () {
+        var listItems = $(".work__list").children();
+
+        listItems.removeClass("work__list-el--is-active");
+        listItems.eq(index).addClass("work__list-el--is-active");
+
+        $(".work__navigation-el").removeClass("work__navigation-el--is-active");
+        $(".work__navigation-el")
+          .eq(index)
+          .addClass("work__navigation-el--is-active");
+
+        index = (index + 1) % listItems.length;
+      }, 2500); 
+    }
+    startInterval(0);
   });
