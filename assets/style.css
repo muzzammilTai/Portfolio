@@ -1026,6 +1026,10 @@ input[type="button"]:focus {
   margin-top: 15%;
 }
 
+.certificate img{
+  box-shadow: 10px 10px 30px #585858;
+}
+
 .wrapper .h4 {
   color: #2046f2;
 }
